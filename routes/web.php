@@ -13,8 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {return view('welcome');});
-Route::get('/V1/buscar', function () {return view('welcome');});
-Route::get('/V1/adicionar', function () {return view('welcome');});
-Route::get('/v1/public/characters', function () {return view('welcome');});
-
+Route::get('/', function () {
+    return view('welcome');
+});
+    
+Route::get('/v1/public/characters/{id?}', 'App\Http\Controllers\charactersController@index');
+Route::get('/v1/public/comics/{id?}', 'App\Http\Controllers\charactersController@tela');
+Route::get('/v1/public/series/{id?}', 'App\Http\Controllers\charactersController@tela');
+Route::get('GET /v1/public/stories/{id?}', 'App\Http\Controllers\charactersController@tela');
+Route::get('GET /v1/public/creators{id?}', 'App\Http\Controllers\charactersController@tela');
