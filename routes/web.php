@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
     
 Route::get('/v1/public/characters/{id?}', 'App\Http\Controllers\charactersController@index');

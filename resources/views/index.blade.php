@@ -23,7 +23,41 @@
     <body class="antialiased">
         <div class="container">
             <div class="row">
-                <div class="col">   
+                <div class="col">
+                    <h1>Marvel</h1>
+                </div>
+            </div>
+
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="masthead mb-auto">
+                <div class="inner">
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link active" href="/">Home</a>
+                    <a class="nav-link" href="/v1/public/characters">Characters</a>
+                    <a class="nav-link" href="/v1/public/comics/">Comics</a>
+                </nav>
+                </div>
+            </header>
+
+            <main role="main" class="inner cover">
+                <h1 class="cover-heading">Herois.</h1>
+                <p class="lead">API dos herois.</p>
+                <p class="lead">
+                <a href="documents/Teste.pdf" class="btn btn-lg btn-secondary">Saiba mais</a>
+                </p>
+            </main>
+
+            <footer class="mastfoot mt-auto">
+                <div class="inner">
+                <p>Desenvolvido por <a href="https://github.com/andredfaria">André de Faria</a>,
+                <a href="#"> 2020</a>.</p>
+                </div>
+            </footer>
+        </div>  
+
+            <!-- <div class="row">
+                <div class="col">
+                    <form>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
                             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -40,7 +74,7 @@
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
-            </div>
+            </div> -->
         </div>
     </body>
 </html>
