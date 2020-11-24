@@ -10,6 +10,7 @@ class Character extends Model
     use HasFactory;
 
     public function listar(){
+        dd($_SERVER);
 
     }
 }

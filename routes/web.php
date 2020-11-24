@@ -17,8 +17,13 @@ Route::get('/', function () {
     return view('index');
 });
     
-Route::get('/v1/public/characters/{id?}', 'App\Http\Controllers\charactersController@index');
-Route::get('/v1/public/comics/{id?}', 'App\Http\Controllers\charactersController@tela');
+Route::get('/v1/public/characters/{id?}', 
+          ['as' => 'characters.listar', 'uses' => 'App\Http\Controllers\charactersController@listar']);  
+
+Route::get('/v1/public/comics/{id?}', 
+              ['as' => 'comics.listar', 'uses' => 'App\Http\Controllers\charactersController@comics']); 
+
+
 Route::get('/v1/public/series/{id?}', 'App\Http\Controllers\charactersController@tela');
-Route::get('GET /v1/public/stories/{id?}', 'App\Http\Controllers\charactersController@tela');
+Route::get('GET /v1/public/stories/{id?}', 'App\Http\Controllers\charactersController@index');
 Route::get('GET /v1/public/creators{id?}', 'App\Http\Controllers\charactersController@tela');
