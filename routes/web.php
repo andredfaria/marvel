@@ -16,14 +16,33 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
-    
-Route::get('/v1/public/characters/{id?}', 
-          ['as' => 'characters.listar', 'uses' => 'App\Http\Controllers\charactersController@listar']);  
 
-Route::get('/v1/public/comics/{id?}', 
-              ['as' => 'comics.listar', 'uses' => 'App\Http\Controllers\charactersController@comics']); 
+Route::get(
+    '/v1/public/characters/{id?}/{param?}',
+    ['as' => 'characters.listar', 'uses' => 'App\Http\Controllers\charactersController@listar']
+);
 
+// Route::get(
+//     '/v1/public/characters/comics/{id?}',
+//     ['as' => 'characters.comics', 'uses' => 'App\Http\Controllers\charactersController@comics']
+// );
 
-Route::get('/v1/public/series/{id?}', 'App\Http\Controllers\charactersController@tela');
-Route::get('GET /v1/public/stories/{id?}', 'App\Http\Controllers\charactersController@index');
-Route::get('GET /v1/public/creators{id?}', 'App\Http\Controllers\charactersController@tela');
+// Route::get(
+//     '/v1/public/characters/{id?}/events',
+//     ['as' => 'characters.events', 'uses' => 'App\Http\Controllers\charactersController@events']
+// );
+
+// Route::get(
+//     '/v1/public/characters/{id?}/series',
+//     ['as' => 'characters.series', 'uses' => 'App\Http\Controllers\charactersController@series']
+// );
+
+// Route::get(
+//     '/v1/public/characters/{id?}/stories',
+//     ['as' => 'characters.stories', 'uses' => 'App\Http\Controllers\charactersController@stories']
+// );
+
+// Route::get(
+//     '/v1/public/characters/{id?}/{$param}',
+//     ['as' => 'characters.stories', 'uses' => 'App\Http\Controllers\charactersController@buscar']
+// );

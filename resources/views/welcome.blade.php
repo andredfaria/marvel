@@ -138,5 +138,7 @@
                 </div>
             </div>
         </div>
+        
+        @include ('layout.footer');
     </body>
 </html>
