@@ -19,10 +19,10 @@ class charactersController extends Controller
                 
         if ($id === 0 && $param === '') {
 
-            $registros = herois::paginate(20);
+            $registros = herois::all();
             return view('characters', compact('registros'));
 
-        } elseif ($id !== 0 && is_int($id) && $param === '') {
+        } elseif ((int)$id !== 0 && $param === '') {
 
             $registros = herois::all()->where('id', '=', $id);
             return view('characters', compact('registros'));
@@ -38,73 +38,35 @@ class charactersController extends Controller
             dd($registros);
 
         } elseif ($id === 'events') {
-            $registros = herois::all()->groupBy('editora')->toArray();
-        } elseif ($id !== 0 && is_int($id) && $param === 'events') {
-            $registros = herois::all()->groupBy('editora')->toArray();
-        } elseif ($id === 'series') {
-            $registros = herois::all()->groupBy('editora')->toArray();
-        } elseif ($id !== 0 && is_int($id) && $param === 'series') {
-            $registros = herois::all()->groupBy('editora')->toArray();
-        } elseif ($id === 'stories') {
-            $registros = herois::all()->groupBy('editora')->toArray();
-        } elseif ($id !== 0 && is_int($id) && $param === 'stories') {
-            $registros = herois::all()->groupBy('editora')->toArray();
-        }else{
-            dd('erro');
-        }
 
-        $view = $param ? $param : $id;
+            $registros = herois::all()->groupBy('vertente')->toArray();
+
+        } elseif ((int)$id !== 0 && $param === 'events') {
+
+            $registros = herois::all()->where('id', '=', $id)->groupBy('vertente')->toArray();
+
+        } elseif ($id === 'series') {
+
+            $registros = herois::all()->groupBy('genero')->toArray();
+
+        } elseif ((int)$id !== 0 && $param === 'series') {
+
+            $registros = herois::all()->where('id', '=', $id)->groupBy('genero')->toArray();
+
+        } elseif ($id === 'stories') {
+
+            $registros = herois::all()->groupBy('olho')->toArray();
+
+        } elseif ((int)$id !== 0 && $param === 'stories') {
+
+            $registros = herois::all()->where('id', '=', $id)->groupBy('olho')->toArray();
+
+        }else{
+            abort(404);
+        }
+    
+        $view = (int) $param != 0 || $param == '' ? $id : $param;
         
         return view($view , compact('registros'));
     }
-
-    public function comics($id = 0)
-    {   
-        
-        $registros = herois::all()->groupBy('editora')->toArray();
-        if ($id !== 0)
-            $registros = herois::all()->where('id', '=', $id);
-
-        return view('comics', compact('registros'));
-    }
-
-    public function events($id = 0)
-    {
-        $registros = herois::all();
-        if ($id !== 0)
-            $registros = herois::all()->where('id', '=', $id);
-
-        return view('events', compact('registros'));
-    }
-
-    public function series($id = 0)
-    {
-        $registros = herois::all();
-        if ($id !== 0)
-            $registros = herois::all()->where('id', '=', $id);
-
-        return view('series', compact('registros'));
-    }
-
-    public function stories($id = 0)
-    {
-        $registros = herois::all();
-        if ($id !== 0)
-            $registros = herois::all()->where('id', '=', $id);
-
-        return view('stories', compact('registros'));
-    }
-
-    public function buscar($id = 0, $param ='')
-    {
-
-        dd($id, $param);
-
-        $registros = herois::all();
-        if ($id !== 0)
-            $registros = herois::all()->where('id', '=', $id);
-
-        return view('stories', compact('registros'));
-    }
-
 }

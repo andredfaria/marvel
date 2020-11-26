@@ -1,7 +1,7 @@
 @include ('layout.header')
 
 <main role="main" class="container inner cover mb-5">
-    <form action="/v1/public/characters/" method="GET">
+<form action="/v1/public/characters/{{}}" method="GET">
         <div class="row mt-5">
             <div class="input-group input-group-sm mb-3 col-12">
                 <div class="input-group-prepend">
@@ -60,5 +60,13 @@
         </div>
     </div>
 </main>   
+
+<script>
+
+function myFunction() {
+  document.getElementById("myCheck").click(); // Click on the checkbox
+}
+
+</script>
 
 @include ('layout.footer')
