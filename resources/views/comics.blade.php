@@ -1,4 +1,3 @@
-
 @include ('layout.header')
 
 <main role="main" class="inner cover">
@@ -6,8 +5,8 @@
         @foreach ($registros as $key => $registro)
             <thead>
                 <tr>
-                    <th scope="col">{{$key}}</th>
-                    <th scope="col">{{$registro[$key]}}</th>
+                    <th scope="col">{{ $key }}</th>
+                    <th scope="col">{{ $registro[$key] }}</th>
                 </tr>
             </thead>
             <table class="table">
@@ -28,16 +27,16 @@
                 <tbody>
                     @foreach ($registro[$key] as $reg)
                         <tr>
-                            <th scope="row">{{$reg->id}}</th>
-                            <td>{{$reg->nome}}</td>
-                            <td>{{$reg->genero}}</td>
-                            <td>{{$reg->olho}}</td>
-                            <td>{{$reg->raça}}</td>
-                            <td>{{$reg->cabelo}}</td>
-                            <td>{{$reg->altura}}</td>
-                            <td>{{$reg->editora}}</td>
-                            <td>{{$reg->vertente}}</td>
-                            <td>{{$reg->peso}}</td>
+                            <th scope="row">{{ $reg->id }}</th>
+                            <td>{{ $reg->nome }}</td>
+                            <td>{{ $reg->genero }}</td>
+                            <td>{{ $reg->olho }}</td>
+                            <td>{{ $reg->raça }}</td>
+                            <td>{{ $reg->cabelo }}</td>
+                            <td>{{ $reg->altura }}</td>
+                            <td>{{ $reg->editora }}</td>
+                            <td>{{ $reg->vertente }}</td>
+                            <td>{{ $reg->peso }}</td>
                         </tr>
                         <tr>
                     @endforeach

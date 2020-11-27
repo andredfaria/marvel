@@ -1,4 +1,3 @@
-
 @include ('layout.header')
 
 <main role="main" class="inner cover">
@@ -19,20 +18,20 @@
         </thead>
         <tbody>
             @foreach ($registros as $registro)
-            <tr>
-                <th scope="row">{{$registro->id}}</th>
-                <td>{{$registro->nome}}</td>
-                <td>{{$registro->genero}}</td>
-                <td>{{$registro->olho}}</td>
-                <td>{{$registro->raça}}</td>
-                <td>{{$registro->cabelo}}</td>
-                <td>{{$registro->altura}}</td>
-                <td>{{$registro->editora}}</td>
-                <td>{{$registro->vertente}}</td>
-                <td>{{$registro->peso}}</td>
-            </tr>
-            <tr>
-                @endforeach
+                <tr>
+                    <th scope="row">{{ $registro->id }}</th>
+                    <td>{{ $registro->nome }}</td>
+                    <td>{{ $registro->genero }}</td>
+                    <td>{{ $registro->olho }}</td>
+                    <td>{{ $registro->raça }}</td>
+                    <td>{{ $registro->cabelo }}</td>
+                    <td>{{ $registro->altura }}</td>
+                    <td>{{ $registro->editora }}</td>
+                    <td>{{ $registro->vertente }}</td>
+                    <td>{{ $registro->peso }}</td>
+                </tr>
+                <tr>
+            @endforeach
         </tbody>
     </table>
 </main>

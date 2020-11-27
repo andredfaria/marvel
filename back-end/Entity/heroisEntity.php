@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Entity;
 
@@ -6,84 +6,89 @@ use Doctrine\ORM\Mapping as ORM;
 
 
 /**
-* @ORM\Entity
-* @ORM\table(name="herois")
-*/
+ * @ORM\Entity
+ * @ORM\table(name="herois")
+ */
 
-class heroisEntity {
-	/**
-	* @ORM\Id
-	* @ORM\colum(type = "integer", name="id")
-	* @ORM\GenerateValue
-	*/
-	private $id;
-
-	/**
-	* @ORM\colum(type="String", nome="nome")
-	*/
-    private $nome;
-    
+class heroisEntity
+{
     /**
-	* @ORM\colum(type="String", nome="olho")
-	*/
+     * @ORM\Id
+     * @ORM\colum(type = "integer", name="id")
+     * @ORM\GenerateValue
+     */
+    private $id;
+
+    /**
+     * @ORM\colum(type="String", nome="nome")
+     */
+    private $nome;
+
+    /**
+     * @ORM\colum(type="String", nome="olho")
+     */
     private $olho;
 
     /**
-	* @ORM\colum(type="String", nome="raça")
-	*/
+     * @ORM\colum(type="String", nome="raça")
+     */
     private $raça;
-    
+
     /**
-	* @ORM\colum(type="String", nome="cabelo")
-	*/
-	private $cabelo;
-    
+     * @ORM\colum(type="String", nome="cabelo")
+     */
+    private $cabelo;
+
     /**
-	* @ORM\colum(type="String", nome="altura")
-	*/
-	private $altura;
-    
+     * @ORM\colum(type="String", nome="altura")
+     */
+    private $altura;
+
     /**
-	* @ORM\colum(type="String", nome="editora")
-	*/
+     * @ORM\colum(type="String", nome="editora")
+     */
     private $editora;
-    
+
     /**
-	* @ORM\colum(type="String", nome="pele")
-	*/
+     * @ORM\colum(type="String", nome="pele")
+     */
     private $pele;
 
     /**
-	* @ORM\colum(type="String", nome="vertente")
-	*/
+     * @ORM\colum(type="String", nome="vertente")
+     */
     private $vertente;
 
 
     /**
-	* @ORM\colum(type="String", nome="peso")
-	*/
+     * @ORM\colum(type="String", nome="peso")
+     */
     private $peso;
 
 
-	public function getId(){
-		return $this->$id;
-	}
+    public function getId()
+    {
+        return $this->$id;
+    }
 
-	public function setId($id){
-		$this->id = $id;
-	}
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
-	public function getNome(){
-		return $this->nome;
-	}
+    public function getNome()
+    {
+        return $this->nome;
+    }
 
-	public function setNome(){
-		$this->nome = $nome;
-	}
+    public function setNome()
+    {
+        $this->nome = $nome;
+    }
 
     /**
      * Get 	* @ORM\colum(type="String", nome="olho")
-     */ 
+     */
     public function getOlho()
     {
         return $this->olho;
@@ -93,7 +98,7 @@ class heroisEntity {
      * Set 	* @ORM\colum(type="String", nome="olho")
      *
      * @return  self
-     */ 
+     */
     public function setOlho($olho)
     {
         $this->olho = $olho;
@@ -103,7 +108,7 @@ class heroisEntity {
 
     /**
      * Get 	* @ORM\colum(type="String", nome="raça")
-     */ 
+     */
     public function getRaça()
     {
         return $this->raça;
@@ -113,7 +118,7 @@ class heroisEntity {
      * Set 	* @ORM\colum(type="String", nome="raça")
      *
      * @return  self
-     */ 
+     */
     public function setRaça($raça)
     {
         $this->raça = $raça;
@@ -121,49 +126,49 @@ class heroisEntity {
         return $this;
     }
 
-	/**
-	 * Get 	* @ORM\colum(type="String", nome="cabelo")
-	 */ 
-	public function getCabelo()
-	{
-		return $this->cabelo;
-	}
+    /**
+     * Get 	* @ORM\colum(type="String", nome="cabelo")
+     */
+    public function getCabelo()
+    {
+        return $this->cabelo;
+    }
 
-	/**
-	 * Set 	* @ORM\colum(type="String", nome="cabelo")
-	 *
-	 * @return  self
-	 */ 
-	public function setCabelo($cabelo)
-	{
-		$this->cabelo = $cabelo;
+    /**
+     * Set 	* @ORM\colum(type="String", nome="cabelo")
+     *
+     * @return  self
+     */
+    public function setCabelo($cabelo)
+    {
+        $this->cabelo = $cabelo;
 
-		return $this;
-	}
+        return $this;
+    }
 
-	/**
-	 * Get 	* @ORM\colum(type="String", nome="altura")
-	 */ 
-	public function getAltura()
-	{
-		return $this->altura;
-	}
+    /**
+     * Get 	* @ORM\colum(type="String", nome="altura")
+     */
+    public function getAltura()
+    {
+        return $this->altura;
+    }
 
-	/**
-	 * Set 	* @ORM\colum(type="String", nome="altura")
-	 *
-	 * @return  self
-	 */ 
-	public function setAltura($altura)
-	{
-		$this->altura = $altura;
+    /**
+     * Set 	* @ORM\colum(type="String", nome="altura")
+     *
+     * @return  self
+     */
+    public function setAltura($altura)
+    {
+        $this->altura = $altura;
 
-		return $this;
-	}
+        return $this;
+    }
 
     /**
      * Get 	* @ORM\colum(type="String", nome="editora")
-     */ 
+     */
     public function getEditora()
     {
         return $this->editora;
@@ -173,7 +178,7 @@ class heroisEntity {
      * Set 	* @ORM\colum(type="String", nome="editora")
      *
      * @return  self
-     */ 
+     */
     public function setEditora($editora)
     {
         $this->editora = $editora;
@@ -183,7 +188,7 @@ class heroisEntity {
 
     /**
      * Get 	* @ORM\colum(type="String", nome="pele")
-     */ 
+     */
     public function getPele()
     {
         return $this->pele;
@@ -193,7 +198,7 @@ class heroisEntity {
      * Set 	* @ORM\colum(type="String", nome="pele")
      *
      * @return  self
-     */ 
+     */
     public function setPele($pele)
     {
         $this->pele = $pele;
@@ -203,7 +208,7 @@ class heroisEntity {
 
     /**
      * Get 	* @ORM\colum(type="String", nome="vertente")
-     */ 
+     */
     public function getVertente()
     {
         return $this->vertente;
@@ -213,7 +218,7 @@ class heroisEntity {
      * Set 	* @ORM\colum(type="String", nome="vertente")
      *
      * @return  self
-     */ 
+     */
     public function setVertente($vertente)
     {
         $this->vertente = $vertente;
@@ -223,7 +228,7 @@ class heroisEntity {
 
     /**
      * Get 	* @ORM\colum(type="String", nome="peso")
-     */ 
+     */
     public function getPeso()
     {
         return $this->peso;
@@ -233,7 +238,7 @@ class heroisEntity {
      * Set 	* @ORM\colum(type="String", nome="peso")
      *
      * @return  self
-     */ 
+     */
     public function setPeso($peso)
     {
         $this->peso = $peso;
